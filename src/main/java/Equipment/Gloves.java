@@ -7,6 +7,14 @@ public class Gloves extends Equipment {
         this._cost = cost;
     }
 
+    public int getCost() {
+        return _cost;
+    }
+
+    public int getWeight() {
+        return _weight;
+    }
+
     private int _weight = 0;
     private int _cost = 0;
 }
