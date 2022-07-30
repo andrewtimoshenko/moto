@@ -16,6 +16,12 @@ import java.util.List;
 
 public class Moto {
 
+    public static void printEquipList(List<Equipment> l) {
+        for(Equipment it: l) {
+            System.out.println(it.getClass().getName());
+        }
+    }
+
     public static void main(String[] args){
 
         Motorcyclist motorcyclist = new Motorcyclist();
@@ -35,12 +41,17 @@ public class Moto {
         long equipTotalCost = motorcyclist.calcEquipCost();
 
         System.out.println("Total equipment cost: " + equipTotalCost);
+        System.out.println("\nEquipment list:");
+        printEquipList(motorcyclist.getEquipList());
 
         motorcyclist.sortByWeight();
+        System.out.println("\nSorted list:");
+        printEquipList(motorcyclist.getEquipList());
 
-        List<?> equipSorted = motorcyclist.findEquipByPriceRange(500, 3000);
+        List<Equipment> equipByRange = motorcyclist.findEquipByPriceRange(500, 3000);
 
-        System.out.println(equipSorted);
+        System.out.println("\nEquipment by range:");
+        printEquipList(equipByRange);
     }
     
 }

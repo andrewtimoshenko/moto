@@ -15,7 +15,6 @@ public class Boots extends Equipment {
         return _weight;
     }
 
-
     private int _weight = 0;
     private int _cost = 0;
 }
